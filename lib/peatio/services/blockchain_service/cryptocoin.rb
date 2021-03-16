@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module BlockchainService
-  class Monero < Peatio::BlockchainService::Base
+  class CryptoCoin < Peatio::BlockchainService::Base
     # Rough number of blocks per hour for Nxt is 6.
     def process_blockchain(blocks_limit: 6, force: false)
       latest_block = client.latest_block_number
@@ -45,11 +45,11 @@ module BlockchainService
     private
 
     def deposit_wallet
-      @deposit_wallet ||= Wallet.deposit.find_by(currency: :xmr)
+      @deposit_wallet ||= Wallet.deposit.find_by(currency: :crypto)
     end
 
     def withdraw_wallet
-      @withdraw_wallet ||= Wallet.withdraw.find_by(currency: :xmr)
+      @withdraw_wallet ||= Wallet.withdraw.find_by(currency: :crypto)
     end
 
     def build_deposits(txns)
