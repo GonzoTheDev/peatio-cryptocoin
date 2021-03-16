@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module BlockchainClient
-  class Monero < Peatio::BlockchainClient::Base
+  class CryptoCoin < Peatio::BlockchainClient::Base
     def initialize(*)
       super
       @json_rpc_call_id  = 0
