@@ -1,18 +1,18 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "peatio/monero/version"
+require "peatio/cryptocoin/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "peatio-monero"
-  spec.version       = Peatio::Monero::VERSION
-  spec.authors       = ["Dinesh Chohda"]
-  spec.email         = ["dinesh.skyach@gmail.com"]
+  spec.name          = "peatio-cryptocoin"
+  spec.version       = Peatio::CryptoCoin::VERSION
+  spec.authors       = ["Shane Wilson"]
+  spec.email         = ["therealcryptocoin@gmail.com"]
 
-  spec.summary       = %q{ Peatio Plugable Plugin for Monero coin}
+  spec.summary       = %q{ Peatio Plugable Plugin for CryptoCoin}
   spec.description   = %q{ A plugin which enables BlockchainService and WalletService methods
-                           for Monero coin. }
-  spec.homepage      = "https://www.peatio.tech"
+                           for CryptoCoin. }
+  spec.homepage      = "https://www.crypt-o-coin.cash"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
