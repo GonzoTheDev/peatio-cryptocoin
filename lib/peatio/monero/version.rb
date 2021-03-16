@@ -1,5 +1,5 @@
 module Peatio
-  module Monero
-    VERSION = "0.1.0"
+  module CryptoCoin
+    VERSION = "1.0.0"
   end
 end
