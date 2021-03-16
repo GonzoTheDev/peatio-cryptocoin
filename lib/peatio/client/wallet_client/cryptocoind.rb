@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module WalletClient
-  class Monerod < Peatio::WalletClient::Base
+  class CryptoCoind < Peatio::WalletClient::Base
 
     def initialize(*)
       super
