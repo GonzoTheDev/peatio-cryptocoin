@@ -1,6 +1,6 @@
-# Peatio::CryptoCoin
+# Peatio::Cryptocoin
 
-Peatio Plugin to enable CryptoCoin coin.
+Peatio Plugin to enable Cryptocoin coin.
 
 ## Usage in peatio
 
@@ -15,7 +15,7 @@ gem 'peatio-cryptocoin'
 
 ```
 - id:                     crypto
-  name:                   CryptoCoin
+  name:                   Cryptocoin
   blockchain_key:         ~
   symbol:                 '₡'
   type:                   coin
@@ -38,19 +38,19 @@ gem 'peatio-cryptocoin'
 `deposit wallet:`
 ```cassandraql
   settings:
-    # CryptoCoin gateway client settings.
+    # Cryptocoin gateway client settings.
     uri:           http://wallet_name:wallet_password@127.0.0.1:33333
-    account_index: 0 # CryptoCoin Account Index
+    account_index: 0 # Cryptocoin Account Index
 ```
 
 
 `hot wallet:`
 ```cassandraql
   settings:
-    # Monero gateway client settings.
+    # Cryptocoin gateway client settings.
     uri:           http://wallet_name:wallet_password@127.0.0.1:33333
-    account_index: 0 # CryptoCoin Account Index
-    address_index: 1 # CryptoCoin Account Sub Address Index
+    account_index: 0 # Cryptocoin Account Index
+    address_index: 1 # Cryptocoin Account Sub Address Index
 ```
 ## Contributing
 
@@ -62,4 +62,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Peatio::Monero project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/GonzoTheDev/peatio-cryptocoin/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Peatio::Cryptocoin project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/GonzoTheDev/peatio-cryptocoin/blob/master/CODE_OF_CONDUCT.md).

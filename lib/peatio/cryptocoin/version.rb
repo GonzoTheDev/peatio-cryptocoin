@@ -1,5 +1,5 @@
 module Peatio
-  module CryptoCoin
+  module Cryptocoin
     VERSION = "2.6.1"
   end
 end

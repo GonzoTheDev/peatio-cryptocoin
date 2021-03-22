@@ -4,7 +4,7 @@ require 'peatio/client/blockchain_client/cryptocoin'
 require 'peatio/client/wallet_client/cryptocoind'
 
 module Peatio
-  module CryptoCoin
+  module Cryptocoin
     require "peatio/cryptocoin/version"
   end
 end

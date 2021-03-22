@@ -5,13 +5,13 @@ require "peatio/cryptocoin/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "peatio-cryptocoin"
-  spec.version       = Peatio::CryptoCoin::VERSION
+  spec.version       = Peatio::Cryptocoin::VERSION
   spec.authors       = ["Shane Wilson"]
   spec.email         = ["therealcryptocoin@gmail.com"]
 
-  spec.summary       = %q{ Peatio Plugable Plugin for CryptoCoin}
+  spec.summary       = %q{ Peatio Plugable Plugin for Cryptocoin}
   spec.description   = %q{ A plugin which enables BlockchainService and WalletService methods
-                           for CryptoCoin. }
+                           for Cryptocoin. }
   spec.homepage      = "https://www.crypt-o-coin.cash"
   spec.license       = "MIT"
 
