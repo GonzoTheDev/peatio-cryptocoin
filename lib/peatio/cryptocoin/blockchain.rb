@@ -18,7 +18,7 @@ module Peatio
       end
 
       def fetch_block!(block_number)
-        block_hash = client.json_rpc(:getblockhash, [block_number])
+        block_hash = client.json_rpc(:get_blockhash, [block_number])
 
         client.json_rpc(:getblock, [block_hash, 2])
           .fetch('tx').each_with_object([]) do |tx, txs_array|
@@ -32,7 +32,7 @@ module Peatio
       end
 
       def latest_block_number
-        client.json_rpc(:getblockcount)
+        client.json_rpc(:get_blockcount)
       rescue Client::Error => e
         raise Peatio::Blockchain::ClientError, e
       end
