@@ -1,65 +1,67 @@
 # Peatio::Cryptocoin
 
-Peatio Plugin to enable Cryptocoin coin.
+Peatio cryptocoin plugin for Rubykube stack
 
-## Usage in peatio
+## Installation
 
-
-Add this line to your application's `Gemfile.plugin`:
+Add this line to your application's Gemfile:
 
 ```ruby
 gem 'peatio-cryptocoin'
 ```
 
-`Coin:` config/seeds/currencies.yml
+And then execute:
 
-```
-- id:                     crypto
-  name:                   Cryptocoin
-  blockchain_key:         ~
-  symbol:                 '₡'
-  type:                   coin
-  precision:              12
-  base_factor:            1_000_000_000_000
-  enabled:                true
-  # Deposits with less amount are skipped during blockchain synchronization.
-  # We advise to set value 10 times bigger than the network fee to prevent losses.
-  min_deposit_amount:     0.1
-  min_collection_amount:  0.1
-  withdraw_limit_24h:     0.5
-  withdraw_limit_72h:     1.2
-  deposit_fee:            0
-  withdraw_fee:           0
-  options:                {}
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install peatio-cryptocoin
+
+## Usage
+
+For Peatio Cryptocoin plugin integration you need to do the following steps:
+
+### Image Build.
+
+1. Add peatio-cryptocoin gem into your Gemfile.plugin
+```ruby
+gem 'peatio-cryptocoin', '~> 0.2.0'
 ```
 
-`wallet:` config/seeds/wallet.yml
+2. Run `bundle install` for updating Gemfile.lock
 
-`deposit wallet:`
-```cassandraql
-  settings:
-    # Cryptocoin gateway client settings.
-    uri:           http://wallet_name:wallet_password@127.0.0.1:33333
-    account_index: 0 # Cryptocoin Account Index
-```
+3. Build custom Peatio [docker image with Cryptocoin plugin](https://github.com/rubykube/peatio/blob/master/docs/plugins.md#build)
+
+4. Push your image using `docker push`
+
+5. Update your deployment to use image with peatio-cryptocoin gem
+
+### Peatio Configuration.
+
+1. Create Cryptocoin Blockchain [config example](../config/blockchains.yml).
+    * No additional steps are needed
+
+2. Create Cryptocoin Currency [config example](../config/currencies.yml).
+    * No additional steps are needed
+
+3. Create Cryptocoin Wallets [config example](../config/wallets.yml)(deposit and hot wallets are required).
+    * No additional steps are needed
 
 
-`hot wallet:`
-```cassandraql
-  settings:
-    # Cryptocoin gateway client settings.
-    uri:           http://wallet_name:wallet_password@127.0.0.1:33333
-    account_index: 0 # Cryptocoin Account Index
-    address_index: 1 # Cryptocoin Account Sub Address Index
-```
+## Development
+
+Plugin development [example](https://github.com/rubykube/peatio/blob/master/docs/coins/development.md).
+
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/GonzoTheDev/peatio-cryptocoin. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/rubykube/peatio-cryptocoin.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-## Code of Conduct
+## Consulting
 
-Everyone interacting in the Peatio::Cryptocoin project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/GonzoTheDev/peatio-cryptocoin/blob/master/CODE_OF_CONDUCT.md).
+You can contact Openware for finding certified vendors:
+[Openware.com](https://www.openware.com)

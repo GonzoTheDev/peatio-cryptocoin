@@ -6,25 +6,13 @@ require "peatio/cryptocoin/version"
 Gem::Specification.new do |spec|
   spec.name          = "peatio-cryptocoin"
   spec.version       = Peatio::Cryptocoin::VERSION
-  spec.authors       = ["Shane Wilson"]
-  spec.email         = ["therealcryptocoin@gmail.com"]
+  spec.authors       = ["Yaroslav S."]
+  spec.email         = ["ysavchuk@heliostech.fr"]
 
-  spec.summary       = %q{ Peatio Plugable Plugin for Cryptocoin}
-  spec.description   = %q{ A plugin which enables BlockchainService and WalletService methods
-                           for Cryptocoin. }
-  spec.homepage      = "https://www.crypt-o-coin.cash"
+  spec.summary       = %q{Gem for extending Peatio plugable system with Cryptocoin implementation.}
+  spec.description   = %q{Cryptocoin Peatio gem which implements Peatio::Blockchain::Abstract & Peatio::Wallet::Abstract.}
+  spec.homepage      = "https://openware.com/"
   spec.license       = "MIT"
-
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-
-    spec.metadata["homepage_uri"] = spec.homepage
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
@@ -35,16 +23,17 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "activesupport", "~> 5.2.3" 
-  spec.add_dependency "better-faraday", "~> 1.0.5" 
-  spec.add_dependency "faraday", "~> 0.15.4" 
-  spec.add_dependency "memoist", "~> 0.16.0" 
-  spec.add_dependency "peatio", "~> 0.6.1" # Required.
+  spec.add_dependency "activesupport", "~> 5.2.3"
+  spec.add_dependency "better-faraday", "~> 1.0.5"
+  spec.add_dependency "faraday", "~> 0.17"
+  spec.add_dependency "memoist", "~> 0.16.0"
+  spec.add_dependency "peatio", ">= 0.6.3"
+  spec.add_dependency 'net-http-persistent', '~> 3.0.1'
 
-  spec.add_development_dependency "bundler", "~> 2.1.4" 
-  spec.add_development_dependency "mocha", "~> 1.8" 
-  spec.add_development_dependency "pry-byebug" 
-  spec.add_development_dependency "rake", "~> 10.0" 
-  spec.add_development_dependency "rspec", "~> 3.0" 
+  spec.add_development_dependency "bundler", "~> 1.16"
+  spec.add_development_dependency "mocha", "~> 1.8"
+  spec.add_development_dependency "pry-byebug"
+  spec.add_development_dependency "rake", "~> 13.0"
+  spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "webmock", "~> 3.5"
 end
